@@ -1,0 +1,768 @@
+processes:
+  - id: PR-1
+    name: Electronics Testing
+    category: TY-3
+    parent: PR-5
+  - id: PR-3
+    name: Electronics Assembly
+    category: TY-3
+    parent: PR-5
+  - id: PR-4
+    name: PCB Design
+    category: TY-3
+    parent: PR-5
+  - id: PR-9
+    name: Part Selection
+    category: TY-3
+    parent: PR-4
+  - id: PR-5
+    name: Building & Selling Electronic Products
+    category: TY-3
+  - id: PR-6
+    name: Software Development
+    category: TY-2
+  - id: PR-7
+    name: Writing Documentation
+    category: TY-2
+    parent: PR-15
+  - id: PR-8
+    name: Generating Documentation
+    category: TY-2
+    parent: PR-15
+  - id: PR-2
+    name: Hardware Design
+    category: TY-1
+  - id: PR-10
+    name: Inventory Management
+    category: TY-3
+    parent: PR-3
+  - id: PR-11
+    name: Manufacturing Orchestration
+    category: TY-2
+    parent: PR-3
+  - id: PR-12
+    name: Publishing (Open Source) Hardware
+    category: TY-3
+    parent: PR-5
+  - id: PR-13
+    name: Viewers
+    # TODO ADD description: Specific or generalised file / documentation viewers
+    category: TY-2
+    parent: PR-15
+  - id: PR-14
+    name: Project Management
+    category: TY-2
+  - id: PR-15
+    name: Documentation
+    category: TY-2
+  - id: PR-16
+    name: Layout
+    category: TY-3
+    parent: PR-4
+  - id: PR-17
+    name: Electrical Simulation
+    category: TY-3
+    parent: PR-4
+  - id: PR-18
+    name: Generating Manufacturing Information
+    category: TY-3
+    parent: PR-4
+
+tools:
+  - id: TL-1
+    name: Testomatic
+    link: https://github.com/superhouse/testomatic
+    description: An open-source automated testing tool fixture for electronics projects
+    type: TY-1
+    license: LI-1
+    authors:
+      - AU-1
+    processes:
+      - PR-1
+  - id: TL-2
+    name: OpenHTF
+    link: https://www.openhtf.com/
+    description: OpenHTF (Open Hardware Testing Framework) is an open-source Python framework for hardware testing.
+    license: LI-3
+    type: TY-2
+    processes:
+      - PR-1
+    related_to:
+      - TL-1
+  - id: TL-3
+    name: KiCad
+    link: https://kicad.org/
+    description: An open-source software suite for electronic design automation (EDA)
+    type: TY-2 # TY-3
+    license: LI-7
+    processes:
+      - PR-4
+  - id: TL-4
+    name: KiKit
+    link: https://yaqwsx.github.io/KiKit
+    description: Automation tools for KiCAD
+    type: TY-2 # TY-3
+    license: LI-2
+    processes:
+      - PR-4
+    authors:
+      - AU-2
+    related_to:
+      - TL-3
+  - id: TL-5
+    name: Pinion
+    description: Generate interactive and nice-looking diagrams for your PCBs!
+    link: https://yaqwsx.github.io/Pinion/
+    type: TY-2
+    license: LI-2
+    processes:
+      - PR-8
+    authors:
+      - AU-2
+    related_to:
+      - TL-3
+  - id: TL-6
+    name: PcbDraw
+    description: Convert your KiCAD board into a nicely looking 2D drawing suitable for pinout diagrams
+    link: https://github.com/yaqwsx/PcbDraw
+    type: TY-2
+    license: LI-2
+    processes:
+      - PR-8
+    authors:
+      - AU-2
+    related_to:
+      - TL-3
+      - TL-5
+  - id: TL-7
+    name: jlcparts
+    description: Better parametric search for components available for JLC PCB assembly
+    link: https://yaqwsx.github.io/jlcparts/
+    type: TY-2
+    license: LI-2
+    processes:
+      - PR-9
+    authors:
+      - AU-2
+  - id: TL-8
+    name: Tofupilot Framework
+    link: https://github.com/tofupilot/framework
+    description: TofuPilot Framework is an open-source test orchestration framework for hardware manufacturing.
+    license: LI-2
+    type: TY-2
+    processes:
+      - PR-1
+    related_to:
+      - TL-1
+      - TL-2
+  - id: TL-9
+    name: hardpy
+    link: https://everypinio.github.io/hardpy/
+    description: Hardware testing that simply works
+    license: LI-4
+    type: TY-2
+    processes:
+      - PR-1
+    related_to:
+      - TL-1
+  - id: TL-10
+    name: LumenPnP
+    link: https://github.com/opulo-inc/lumenpnp
+    description: The LumenPnP is an open source pick and place machine.
+    license: LI-8
+    type: TY-1
+    processes:
+      - PR-3
+    related_to:
+      - TL-36
+  - id: TL-11
+    name: GitBuilding
+    link: https://gitlab.com/gitbuilding/gitbuilding
+    description: GitBuilding is an open source program for writing hardware assembly instructions
+    type: TY-2
+    license: LI-4
+    processes:
+      - PR-8
+      - PR-7
+    authors:
+      - AU-3
+  - id: TL-12
+    name: FreeCAD
+    link: https://www.freecad.org/
+    description: FreeCAD is a 3D parametric modeler
+    type: TY-2
+    license: LI-9
+    processes:
+      - PR-2
+  - id: TL-13
+    name: OSH AutoDoc Workbench
+    link: https://osh-autodoc.org/
+    description: FreeCad workbench that supports the creation of assembly manuals of open source hardware
+    type: TY-2
+    license: LI-10
+    processes:
+      - PR-8
+      - PR-7
+    related_to:
+      - TL-12
+  - id: TL-14
+    name: ExSource-Tools
+    description: Validate ExSource files
+    link: "https://gitlab.com/gitbuilding/exsource-tools"
+    license: LI-10
+    type: TY-2
+    processes:
+      - PR-7
+      - PR-8
+    authors:
+      - AU-3
+    related_to:
+      - TL-11
+  - id: TL-15
+    name: EngScript
+    description: "Experimental library aiming to provide fast OpenSCAD-like, python tool, with integrated rendering and assembly capabilities."
+    link: "https://gitlab.com/gitbuilding/engscript"
+    license: LI-10
+    type: TY-2
+    processes:
+      - PR-2
+      - PR-8
+    authors:
+      - AU-3
+    related_to:
+      - TL-11
+      - TL-30
+  - id: TL-16
+    name: CadOrchestrator
+    description: Create consistent production files and clear assembly documentation for your modular hardware project
+    link: "https://gitbuilding.gitlab.io/cadorchestrator/cadorchestrator.html"
+    sourceLink: "https://gitlab.com/gitbuilding/cadorchestrator"
+    license: LI-7
+    type: TY-2
+    processes:
+      - PR-7
+    authors:
+      - AU-3
+    related_to:
+      - TL-11
+      - TL-30 # OpenSCAD
+      - TL-14
+      - TL-12 # FreeCad
+      - TL-31 # CadQuery
+  - id: TL-17
+    name: LibrePCB
+    description: "A powerful, innovative and intuitive EDA suite for everyone! "
+    link: "https://librepcb.org/"
+    sourceLink: "https://github.com/LibrePCB/LibrePCB"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-4
+      - PR-9
+      - PR-8
+    authors:
+      - AU-10
+  - id: TL-17
+    name: Graphviz
+    description: Open source graph visualization software
+    link: "https://www.graphviz.org/"
+    sourceLink: "https://gitlab.com/graphviz/graphviz"
+    license: LI-11
+    type: TY-2
+    processes:
+      - PR-7
+      - PR-8
+
+  - id: TL-18
+    name: pinout
+    description: "Generates hardware pinout diagrams as SVG images. "
+    link: "https://pinout.readthedocs.io/"
+    sourceLink: "https://github.com/j0ono0/pinout"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-8
+    authors:
+      - AU-4
+  - id: TL-19
+    name: Sphinx
+    description: "The Sphinx documentation generator "
+    link: "https://www.sphinx-doc.org/"
+    sourceLink: "https://github.com/sphinx-doc/sphinx"
+    license: LI-12
+    type: TY-2
+    processes:
+      - PR-7
+      - PR-8
+
+  - id: TL-20
+    name: WireViz
+    description: "Easily document cables and wiring harnesses. "
+    link: "https://github.com/wireviz/WireViz"
+    sourceLink: "https://github.com/wireviz/WireViz"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-7
+      - PR-8
+
+    related_to:
+      - TL-17
+  - id: TL-21
+    name: Part-DB-server
+    description: "Open source inventory management system for your electronic components "
+    link: "https://docs.part-db.de/"
+    sourceLink: "https://github.com/Part-DB/Part-DB-server"
+    license: LI-13
+    type: TY-3
+    processes:
+      - PR-9
+      - PR-6
+      - PR-10
+    authors:
+      - AU-5
+  - id: TL-22
+    name: LibreCAD
+    description: "Cross-platform 2D CAD program, can write DXF/PDF/SVG files"
+    link: "https://librecad.org/"
+    sourceLink: "https://github.com/LibreCAD/LibreCAD/"
+    license: LI-14
+    type: TY-3
+    processes:
+      - PR-4
+
+  - id: TL-23
+    name: InteractiveHtmlBom
+    description: "Interactive HTML BOM generation plugin for KiCad, EasyEDA, Eagle, Fusion360 and Allegro PCB designer"
+    link: "https://github.com/openscopeproject/InteractiveHtmlBom/wiki"
+    sourceLink: "https://github.com/openscopeproject/InteractiveHtmlBom"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-8
+      - PR-3
+    authors:
+      - AU-6
+    related_to:
+      - TL-3
+    # TODO Eagle, Altiom, Fusion360, Allegro
+  - id: TL-24
+    name: tscircuit
+    description: Create real electronics with Typescript and React
+    link: "https://tscircuit.com/"
+    sourceLink: "https://github.com/tscircuit/tscircuit"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-4
+      - PR-8
+    authors:
+      - AU-7
+  - id: TL-25
+    name: Ki-nTree
+    description: "Fast part creation for KiCad and InvenTree "
+    link: "https://github.com/sparkmicro/Ki-nTree"
+    sourceLink: "https://github.com/sparkmicro/Ki-nTree"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-9
+      - PR-4
+    authors:
+      - AU-8
+    related_to:
+      - TL-3
+      - TL-44
+  - id: TL-26
+    name: KiCost
+    description: "Build cost spreadsheet for a KiCad project. "
+    link: "https://hildogjr.github.io/KiCost/"
+    sourceLink: "https://github.com/hildogjr/KiCost"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-9
+      - PR-5
+    authors:
+      - AU-9
+    related_to:
+      - TL-3
+  - id: TL-27
+    name: Kitspace
+    description: Project sharing site for electronics projects
+    link: "https://kitspace.org/"
+    sourceLink: "https://github.com/kitspace/kitspace-v2"
+    license: LI-6
+    type: TY-3
+    processes:
+      - PR-12
+    authors:
+      - AU-11
+  - id: TL-27
+    name: KiCanvas
+    description: "Interactive , browser-based viewer for KiCad schematics and boards"
+    link: "https://kicanvas.org/"
+    sourceLink: "https://github.com/theacodes/kicanvas"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-13
+    authors:
+      - AU-12
+    related_to:
+      - TL-3
+  - id: TL-28
+    name: tracespace
+    description: "Generate beautiful and accurate SVG renders of printed circuit boards "
+    link: "https://tracespace.io/"
+    sourceLink: "https://github.com/tracespace/tracespace"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-13
+    authors:
+      - AU-13
+  - id: TL-29
+    name: OpenHardware.io
+    description: Share Open Hardware projects
+    link: "https://www.openhardware.io/"
+    license: LI-15
+    type: TY-3
+    processes:
+      - PR-12
+
+  - id: TL-30
+    name: OpenSCAD
+    description: The Programmers Solid 3D CAD Modeller
+    link: "https://openscad.org/"
+    sourceLink: "https://github.com/openscad/openscad/"
+    license: LI-14
+    type: TY-2
+    processes:
+      - PR-2
+
+  - id: TL-31
+    name: CADQuery
+    description: "Intuitive, easy-to-use Python library for building parametric 3D CAD models"
+    link: "https://cadquery.readthedocs.io/"
+    sourceLink: "https://github.com/CadQuery/cadquery/tree/v2.6.1"
+    license: LI-3
+    type: TY-2
+    processes:
+      - PR-2
+
+  - id: TL-32
+    name: pcb2blender
+    description: "KiCad to Blender 3D model workflow "
+    link: "https://github.com/30350n/pcb2blender"
+    sourceLink: "https://github.com/30350n/pcb2blender"
+    license: LI-7
+    type: TY-2
+    processes:
+      - PR-8
+    authors:
+      - AU-14
+    related_to:
+      - TL-3
+      - TL-40
+  - id: TL-33
+    name: Online3DViewer
+    description: Visualize and explore 3D models in your browser
+    link: "https://3dviewer.net/"
+    sourceLink: "https://github.com/kovacsv/Online3DViewer"
+    license: LI-2
+    type: TY-2
+    processes:
+      - PR-13
+    authors:
+      - AU-15
+  - id: TL-34
+    name: MKDocs
+    description: Project documentation with Markdown
+    link: "https://www.mkdocs.org/"
+    sourceLink: "https://github.com/mkdocs/mkdocs"
+    license: LI-12
+    type: TY-2
+    processes:
+      - PR-7
+  - id: TL-35
+    name: OpenProject
+    description: "Powerful classic, agile or hybrid project management in a secure environment"
+    link: "https://www.openproject.org/"
+    sourceLink: "https://github.com/opf/openproject"
+    license: LI-7
+    type: TY-2
+    processes:
+      - PR-14
+      - PR-11
+  - id: TL-36
+    name: OpenPnP
+    description: "pen Source SMT pick and place system that includes ready to run software, and hardware designs that you can build and modify"
+    link: "https://openpnp.org/"
+    sourceLink: "https://github.com/openpnp/openpnp"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-3
+    authors:
+      - AU-16
+  - id: TL-37
+    name: OctoPrint
+    description: The snappy web interface for your 3D printer
+    link: "https://octoprint.org/"
+    sourceLink: "https://github.com/OctoPrint/OctoPrint"
+    license: LI-6
+    type: TY-2
+    processes:
+      - PR-11
+    authors:
+      - AU-17
+  - id: TL-38
+    name: Horizon EDA
+    description: Electronic Design Automation package for printed circuit board design
+    link: "https://horizon-eda.org/"
+    sourceLink: "https://github.com/horizon-eda/horizon"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-4
+      - PR-8
+    authors:
+      - AU-18
+  - id: TL-39
+    name: Dune 3D
+    description: "Dune 3D is a parametric 3D CAD application that supports STEP import/export, fillets and chamfers."
+    link: "https://dune3d.org/"
+    sourceLink: "https://github.com/dune3d/dune3d"
+    license: LI-7
+    type: TY-2
+    processes:
+      - PR-2
+    authors:
+      - AU-18
+  - id: TL-40
+    name: Blender
+    description: Free and open source 3D creation suite
+    link: "https://www.blender.org/"
+    sourceLink: "https://projects.blender.org/blender/blender"
+    license: LI-4
+    type: TY-2
+    processes:
+      - PR-2
+  - id: TL-41
+    name: Redmine
+    description: Flexible project management web application
+    link: "https://www.redmine.org/"
+    sourceLink: "https://www.redmine.org/projects/redmine/repository"
+    license: LI-14
+    type: TY-2
+    processes:
+      - PR-14
+      - PR-11
+  - id: TL-42
+    name: Taiga
+    description: Project management tool  For cross-functional agile teams to work effectively
+    link: "https://taiga.io/"
+    sourceLink: "https://github.com/taigaio/taiga-front"
+    license: LI-6
+    type: TY-2
+    processes:
+      - PR-14
+      - PR-11
+
+  - id: TL-43
+    name: KiBot
+    description: KiCad automation utility
+    link: "https://github.com/INTI-CMNB/KiBot"
+    sourceLink: "https://github.com/INTI-CMNB/KiBot"
+    license: LI-6
+    type: TY-3
+    processes:
+      - PR-8
+    related_to:
+      - TL-3
+  - id: TL-44
+    name: KiDiff
+    description: Tool to generate a PDF file showing the changes between two KiCad PCB/SCH files
+    link: "https://github.com/INTI-CMNB/KiDiff"
+    sourceLink: "https://github.com/INTI-CMNB/KiDiff"
+    license: LI-14
+    type: TY-3
+    processes:
+      - PR-8
+    related_to:
+      - TL-3
+  - id: TL-45
+    name: InvenTree
+    description: "Open Source Inventory Management & Part Lifecycle System"
+    link: "https://inventree.org/"
+    sourceLink: "https://github.com/inventree/inventree"
+    license: LI-2
+    type: TY-3
+    processes:
+      - PR-10
+      - PR-9
+      - PR-11
+      - PR-14
+    related_to:
+      - TL-3
+      - TL-20
+  - id: TL-46
+    name: Inkscape
+    description: Open Source vector graphics editor with great SVG support
+    link: "https://inkscape.org/"
+    sourceLink: "https://gitlab.com/inkscape/inkscape"
+    license: LI-16
+    type: TY-2
+    processes:
+      - PR-2
+      - PR-7
+  - id: TL-47
+    name: Fritzing
+    description: "Electronic Design Automation software with a low entry barrier, suited for the needs of makers and hobbyists."
+    link: "https://fritzing.org/"
+    sourceLink: "https://github.com/fritzing/fritzing-app"
+    license: LI-7
+    type: TY-3
+    processes:
+      - PR-4
+      - PR-8
+
+categories:
+  - id: TY-1
+    name: Hardware
+    description: Physical components, devices or tools
+  - id: TY-2
+    name: Software
+    description: Code libraries, applications, or frameworks
+  - id: TY-3
+    name: Electronics
+    parent: TY-1
+    description: Hardware which includes electronic components, circuits, or systems
+
+authors:
+  - id: AU-1
+    name: Jonathan Oxer
+    email: jon@oxer.com.au
+    link: https://github.com/jonoxer
+  - id: AU-2
+    name: Jan Mrázek
+    link: https://github.com/yaqwsx
+    email: email@honzamrazek.cz
+  - id: AU-3
+    name: Julian Sterling
+    link: https://gitlab.com/julianstirling
+  - id: AU-4
+    name: John Newall
+    link: https://github.com/j0ono0
+  - id: AU-5
+    name: Jan Böhmer
+    link: https://github.com/jbtronics
+    email: mail@jan-boehmer.de
+  - id: AU-6
+    name: Funkenjaeger
+    link: https://github.com/Funkenjaeger
+  - id: AU-7
+    name: Severin Ibarluzea
+    link: https://github.com/seveibar
+  - id: AU-8
+    name: Francois
+    link: https://github.com/eeintech
+  - id: AU-9
+    name: Hildo Guillardi Júnior
+    link: https://github.com/hildogjr
+  - id: AU-10
+    name: U. Bruhin
+    link: https://github.com/ubruhin
+  - id: AU-11
+    name: Kaspar
+    link: https://github.com/kasbah
+  - id: AU-12
+    name: Stargirl Flowers
+    link: https://github.com/theacodes
+  - id: AU-13
+    name: Michael Cousins
+    link: https://github.com/mcous
+    email: michael@cousins.io
+  - id: AU-14
+    name: Bobbe
+    link: https://github.com/30350n
+  - id: AU-15
+    name: Viktor Kovacs
+    link: https://github.com/kovacsv
+  - id: AU-16
+    name: Jason von Nieda
+    link: https://github.com/vonnieda
+    email: jason@vonnieda.org
+  - id: AU-17
+    name: Gina Häußge
+    link: https://foosel.net/
+  - id: AU-18
+    name: Lukas K.
+    link: https://github.com/carrotIndustries
+
+licenses:
+  - id: LI-1
+    name: TAPR Open Hardware License (OHL) Version 1.1
+    link: http://www.tapr.org/OHL
+    spdx: TAPR-OHL-1.0
+  - id: LI-2
+    name: MIT License
+    link: https://opensource.org/licenses/MIT
+    spdx: MIT
+  - id: LI-3
+    name: Apache License 2.0
+    link: https://www.apache.org/licenses/LICENSE-2.0
+    spdx: Apache-2.0
+  - id: LI-4
+    name: GNU General Public License v3.0
+    link: https://www.gnu.org/licenses/gpl-3.0.en.html
+    spdx: GPL-3.0-only
+  - id: LI-5
+    name: GNU Lesser General Public License v3.0 only
+    link: https://www.gnu.org/licenses/lgpl-3.0.en.html
+    spdx: LGPL-3.0-only
+  - id: LI-6
+    name: GNU Affero General Public License v3.0 only
+    link: https://www.gnu.org/licenses/agpl-3.0.en.html
+    spdx: AGPL-3.0-only
+  - id: LI-7
+    name: GPLv3 or later
+    link: https://www.gnu.org/licenses/gpl-3.0.en.html
+    spdx: GPL-3.0-or-later
+  - id: LI-8
+    name: CERN-OHL-W v2
+    link: https://ohwr.org/cern_ohl_w_v2.txt
+    spdx: CERN-OHL-W-2.0
+  - id: LI-9
+    name: LGPL 2.1 or later
+    link: https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html
+    spdx: LGPL-2.1-or-later
+  - id: LI-10
+    name: LGPL 3.0 or later
+    link: https://www.gnu.org/licenses/lgpl-3.0.en.html
+    spdx: LGPL-3.0-or-later
+  - id: LI-11
+    name: Eclipse Public License 1.0
+    spdx: EPL-1.0
+    link: https://www.eclipse.org/legal/epl/epl-v10.html
+  - id: LI-12
+    name: BSD 2-Clause
+    spdx: BSD-2-Clause
+    link: https://opensource.org/license/BSD-2-Clause
+  - id: LI-13
+    spdx: AGPL-3.0-or-later
+    name: GNU Affero General Public License v3.0 or later
+    link: https://www.gnu.org/licenses/agpl-3.0.html
+  - id: LI-14
+    spdx: GPL-2.0-only
+    name: GNU General Public License v2.0 only
+    link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  - id: LI-15
+    spdx: "LicenseRef-Proprietary"
+    name: Proprietary License
+    link: "https://choosealicense.com/no-permission/"
+  - id: LI-16
+    spdx: GPL-2.0-or-later
+    name: GNU General Public License v2.0 or later
+    link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html

@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://midsize.io/schema/tool_data",
+  "title": "(Open Source) Tooling for (Open) Hardware Projects",
+  "description": "A linkable list of tools that might be used for midsize open hardware projects",
+  "definitions":{
+    "process": {
+      "description": "Processes in the tool list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the process",
+            "pattern": "^PR-[0-9]+$",
+            "examples": ["PR-1", "PR-2"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "description": "The name or id of the category this process belongs to",
+            "$ref": "#/definitions/category/items/properties/id"
+          },
+          "parent": {
+            "type": "string",
+            "description": "The name of the parent process if this is a sub-process",
+            "nullable": true,
+            "default": null,
+            "$ref": "#/definitions/process/items/properties/id"
+          }
+        },
+        "required": [
+          "name",
+          "category"
+        ]
+      }
+    },
+    "category": {
+      "description": "Possible categories in the tool list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the category",
+            "pattern": "^TY-[0-9]+$",
+            "examples": ["TY-1", "TY-2"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "string",
+            "description": "The name of the parent category if this is a sub-category",
+            "nullable": true,
+            "default": null,
+            "$ref": "#/definitions/category/items/properties/id"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description"
+        ]
+      }
+    },
+    "author": {
+      "description": "Possible authors in the tool list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the author",
+            "pattern": "^AU-[0-9]+$",
+            "examples": ["AU-1", "AU-2"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["id", "name"],
+        "oneOf": [
+          {
+            "anyOf": [
+              {
+                "required": [
+                  "email"
+                ]
+              },
+              {
+                "required": [
+                  "link"
+                ]
+              },
+              {
+                "required": [
+                  "email",
+                  "link"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "license": {
+      "description": "The licenses that might get used with their name, link and spdx identifier",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the license",
+            "pattern": "^LI-[0-9]+$",
+            "examples": ["LI-1", "LI-2"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "spdx": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "link",
+          "spdx"
+        ]
+      }
+    },
+    "tool":
+    {
+      "description": "Tools in the tool list",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A unique identifier for the tool",
+            "pattern": "^TL-[0-9]+$",
+            "examples": ["TL-1", "TL-2"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          },
+          "sourceLink": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string",
+            "description": "The id of the category this tool belongs to",
+            "$ref": "#/definitions/category/items/properties/id"
+          },
+          "license": {
+            "type": "string",
+            "description": "The id of the primary license this tool is released under",
+            "$ref": "#/definitions/license/items/properties/id"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "#/definitions/author/items/properties/id"
+            }
+          },
+          "processes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "#/definitions/process/items/properties/id"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "type",
+          "license",
+          "processes"
+        ]
+      }
+  }},
+  "type": "object",
+  "properties": {
+    "processes": {
+      "$ref": "#/definitions/process"
+    },
+    "categories": {
+      "$ref": "#/definitions/category"
+    },
+    "authors": {
+      "$ref": "#/definitions/author"
+    },
+    "licenses": {
+      "$ref": "#/definitions/license"
+    },
+    "tools": {
+      "$ref": "#/definitions/tool"
+    }
+  },
+  "required": [
+    "licenses", "authors", "categories", "processes", "tools"
+  ]
+}
