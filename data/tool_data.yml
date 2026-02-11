@@ -1,4 +1,4 @@
-processes:
+capability_list:
   - id: PR-1
     name: Electronics Testing
     category: TY-3
@@ -18,6 +18,7 @@ processes:
   - id: PR-5
     name: Building & Selling Electronic Products
     category: TY-3
+    hidden: true
   - id: PR-6
     name: Software Development
     category: TY-2
@@ -55,6 +56,7 @@ processes:
   - id: PR-15
     name: Documentation
     category: TY-2
+    hidden: true
   - id: PR-16
     name: Layout
     category: TY-3
@@ -68,16 +70,16 @@ processes:
     category: TY-3
     parent: PR-4
 
-tools:
+tool_list:
   - id: TL-1
     name: Testomatic
     link: https://github.com/superhouse/testomatic
     description: An open-source automated testing tool fixture for electronics projects
     type: TY-1
     license: LI-1
-    authors:
+    author_list:
       - AU-1
-    processes:
+    capability_list:
       - PR-1
   - id: TL-2
     name: OpenHTF
@@ -85,7 +87,7 @@ tools:
     description: OpenHTF (Open Hardware Testing Framework) is an open-source Python framework for hardware testing.
     license: LI-3
     type: TY-2
-    processes:
+    capability_list:
       - PR-1
     related_to:
       - TL-1
@@ -95,7 +97,7 @@ tools:
     description: An open-source software suite for electronic design automation (EDA)
     type: TY-2 # TY-3
     license: LI-7
-    processes:
+    capability_list:
       - PR-4
   - id: TL-4
     name: KiKit
@@ -103,9 +105,9 @@ tools:
     description: Automation tools for KiCAD
     type: TY-2 # TY-3
     license: LI-2
-    processes:
+    capability_list:
       - PR-4
-    authors:
+    author_list:
       - AU-2
     related_to:
       - TL-3
@@ -115,9 +117,9 @@ tools:
     link: https://yaqwsx.github.io/Pinion/
     type: TY-2
     license: LI-2
-    processes:
+    capability_list:
       - PR-8
-    authors:
+    author_list:
       - AU-2
     related_to:
       - TL-3
@@ -127,9 +129,9 @@ tools:
     link: https://github.com/yaqwsx/PcbDraw
     type: TY-2
     license: LI-2
-    processes:
+    capability_list:
       - PR-8
-    authors:
+    author_list:
       - AU-2
     related_to:
       - TL-3
@@ -140,9 +142,9 @@ tools:
     link: https://yaqwsx.github.io/jlcparts/
     type: TY-2
     license: LI-2
-    processes:
+    capability_list:
       - PR-9
-    authors:
+    author_list:
       - AU-2
   - id: TL-8
     name: Tofupilot Framework
@@ -150,7 +152,7 @@ tools:
     description: TofuPilot Framework is an open-source test orchestration framework for hardware manufacturing.
     license: LI-2
     type: TY-2
-    processes:
+    capability_list:
       - PR-1
     related_to:
       - TL-1
@@ -161,7 +163,7 @@ tools:
     description: Hardware testing that simply works
     license: LI-4
     type: TY-2
-    processes:
+    capability_list:
       - PR-1
     related_to:
       - TL-1
@@ -171,7 +173,7 @@ tools:
     description: The LumenPnP is an open source pick and place machine.
     license: LI-8
     type: TY-1
-    processes:
+    capability_list:
       - PR-3
     related_to:
       - TL-36
@@ -181,10 +183,10 @@ tools:
     description: GitBuilding is an open source program for writing hardware assembly instructions
     type: TY-2
     license: LI-4
-    processes:
+    capability_list:
       - PR-8
       - PR-7
-    authors:
+    author_list:
       - AU-3
   - id: TL-12
     name: FreeCAD
@@ -192,7 +194,7 @@ tools:
     description: FreeCAD is a 3D parametric modeler
     type: TY-2
     license: LI-9
-    processes:
+    capability_list:
       - PR-2
   - id: TL-13
     name: OSH AutoDoc Workbench
@@ -200,7 +202,7 @@ tools:
     description: FreeCad workbench that supports the creation of assembly manuals of open source hardware
     type: TY-2
     license: LI-10
-    processes:
+    capability_list:
       - PR-8
       - PR-7
     related_to:
@@ -211,10 +213,10 @@ tools:
     link: "https://gitlab.com/gitbuilding/exsource-tools"
     license: LI-10
     type: TY-2
-    processes:
+    capability_list:
       - PR-7
       - PR-8
-    authors:
+    author_list:
       - AU-3
     related_to:
       - TL-11
@@ -224,10 +226,10 @@ tools:
     link: "https://gitlab.com/gitbuilding/engscript"
     license: LI-10
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
       - PR-8
-    authors:
+    author_list:
       - AU-3
     related_to:
       - TL-11
@@ -239,9 +241,9 @@ tools:
     sourceLink: "https://gitlab.com/gitbuilding/cadorchestrator"
     license: LI-7
     type: TY-2
-    processes:
+    capability_list:
       - PR-7
-    authors:
+    author_list:
       - AU-3
     related_to:
       - TL-11
@@ -256,11 +258,11 @@ tools:
     sourceLink: "https://github.com/LibrePCB/LibrePCB"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-4
       - PR-9
       - PR-8
-    authors:
+    author_list:
       - AU-10
   - id: TL-17
     name: Graphviz
@@ -269,7 +271,7 @@ tools:
     sourceLink: "https://gitlab.com/graphviz/graphviz"
     license: LI-11
     type: TY-2
-    processes:
+    capability_list:
       - PR-7
       - PR-8
 
@@ -280,9 +282,9 @@ tools:
     sourceLink: "https://github.com/j0ono0/pinout"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-8
-    authors:
+    author_list:
       - AU-4
   - id: TL-19
     name: Sphinx
@@ -291,7 +293,7 @@ tools:
     sourceLink: "https://github.com/sphinx-doc/sphinx"
     license: LI-12
     type: TY-2
-    processes:
+    capability_list:
       - PR-7
       - PR-8
 
@@ -302,7 +304,7 @@ tools:
     sourceLink: "https://github.com/wireviz/WireViz"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-7
       - PR-8
 
@@ -315,11 +317,11 @@ tools:
     sourceLink: "https://github.com/Part-DB/Part-DB-server"
     license: LI-13
     type: TY-3
-    processes:
+    capability_list:
       - PR-9
       - PR-6
       - PR-10
-    authors:
+    author_list:
       - AU-5
   - id: TL-22
     name: LibreCAD
@@ -328,7 +330,7 @@ tools:
     sourceLink: "https://github.com/LibreCAD/LibreCAD/"
     license: LI-14
     type: TY-3
-    processes:
+    capability_list:
       - PR-4
 
   - id: TL-23
@@ -338,10 +340,10 @@ tools:
     sourceLink: "https://github.com/openscopeproject/InteractiveHtmlBom"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-8
       - PR-3
-    authors:
+    author_list:
       - AU-6
     related_to:
       - TL-3
@@ -353,10 +355,10 @@ tools:
     sourceLink: "https://github.com/tscircuit/tscircuit"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-4
       - PR-8
-    authors:
+    author_list:
       - AU-7
   - id: TL-25
     name: Ki-nTree
@@ -365,10 +367,10 @@ tools:
     sourceLink: "https://github.com/sparkmicro/Ki-nTree"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-9
       - PR-4
-    authors:
+    author_list:
       - AU-8
     related_to:
       - TL-3
@@ -380,10 +382,10 @@ tools:
     sourceLink: "https://github.com/hildogjr/KiCost"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-9
       - PR-5
-    authors:
+    author_list:
       - AU-9
     related_to:
       - TL-3
@@ -394,9 +396,9 @@ tools:
     sourceLink: "https://github.com/kitspace/kitspace-v2"
     license: LI-6
     type: TY-3
-    processes:
+    capability_list:
       - PR-12
-    authors:
+    author_list:
       - AU-11
   - id: TL-27
     name: KiCanvas
@@ -405,9 +407,9 @@ tools:
     sourceLink: "https://github.com/theacodes/kicanvas"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-13
-    authors:
+    author_list:
       - AU-12
     related_to:
       - TL-3
@@ -418,9 +420,9 @@ tools:
     sourceLink: "https://github.com/tracespace/tracespace"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-13
-    authors:
+    author_list:
       - AU-13
   - id: TL-29
     name: OpenHardware.io
@@ -428,7 +430,7 @@ tools:
     link: "https://www.openhardware.io/"
     license: LI-15
     type: TY-3
-    processes:
+    capability_list:
       - PR-12
 
   - id: TL-30
@@ -438,7 +440,7 @@ tools:
     sourceLink: "https://github.com/openscad/openscad/"
     license: LI-14
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
 
   - id: TL-31
@@ -448,7 +450,7 @@ tools:
     sourceLink: "https://github.com/CadQuery/cadquery/tree/v2.6.1"
     license: LI-3
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
 
   - id: TL-32
@@ -458,9 +460,9 @@ tools:
     sourceLink: "https://github.com/30350n/pcb2blender"
     license: LI-7
     type: TY-2
-    processes:
+    capability_list:
       - PR-8
-    authors:
+    author_list:
       - AU-14
     related_to:
       - TL-3
@@ -472,9 +474,9 @@ tools:
     sourceLink: "https://github.com/kovacsv/Online3DViewer"
     license: LI-2
     type: TY-2
-    processes:
+    capability_list:
       - PR-13
-    authors:
+    author_list:
       - AU-15
   - id: TL-34
     name: MKDocs
@@ -483,7 +485,7 @@ tools:
     sourceLink: "https://github.com/mkdocs/mkdocs"
     license: LI-12
     type: TY-2
-    processes:
+    capability_list:
       - PR-7
   - id: TL-35
     name: OpenProject
@@ -492,7 +494,7 @@ tools:
     sourceLink: "https://github.com/opf/openproject"
     license: LI-7
     type: TY-2
-    processes:
+    capability_list:
       - PR-14
       - PR-11
   - id: TL-36
@@ -502,9 +504,9 @@ tools:
     sourceLink: "https://github.com/openpnp/openpnp"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-3
-    authors:
+    author_list:
       - AU-16
   - id: TL-37
     name: OctoPrint
@@ -513,9 +515,9 @@ tools:
     sourceLink: "https://github.com/OctoPrint/OctoPrint"
     license: LI-6
     type: TY-2
-    processes:
+    capability_list:
       - PR-11
-    authors:
+    author_list:
       - AU-17
   - id: TL-38
     name: Horizon EDA
@@ -524,10 +526,10 @@ tools:
     sourceLink: "https://github.com/horizon-eda/horizon"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-4
       - PR-8
-    authors:
+    author_list:
       - AU-18
   - id: TL-39
     name: Dune 3D
@@ -536,9 +538,9 @@ tools:
     sourceLink: "https://github.com/dune3d/dune3d"
     license: LI-7
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
-    authors:
+    author_list:
       - AU-18
   - id: TL-40
     name: Blender
@@ -547,7 +549,7 @@ tools:
     sourceLink: "https://projects.blender.org/blender/blender"
     license: LI-4
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
   - id: TL-41
     name: Redmine
@@ -556,7 +558,7 @@ tools:
     sourceLink: "https://www.redmine.org/projects/redmine/repository"
     license: LI-14
     type: TY-2
-    processes:
+    capability_list:
       - PR-14
       - PR-11
   - id: TL-42
@@ -566,7 +568,7 @@ tools:
     sourceLink: "https://github.com/taigaio/taiga-front"
     license: LI-6
     type: TY-2
-    processes:
+    capability_list:
       - PR-14
       - PR-11
 
@@ -577,7 +579,7 @@ tools:
     sourceLink: "https://github.com/INTI-CMNB/KiBot"
     license: LI-6
     type: TY-3
-    processes:
+    capability_list:
       - PR-8
     related_to:
       - TL-3
@@ -588,7 +590,7 @@ tools:
     sourceLink: "https://github.com/INTI-CMNB/KiDiff"
     license: LI-14
     type: TY-3
-    processes:
+    capability_list:
       - PR-8
     related_to:
       - TL-3
@@ -599,7 +601,7 @@ tools:
     sourceLink: "https://github.com/inventree/inventree"
     license: LI-2
     type: TY-3
-    processes:
+    capability_list:
       - PR-10
       - PR-9
       - PR-11
@@ -614,7 +616,7 @@ tools:
     sourceLink: "https://gitlab.com/inkscape/inkscape"
     license: LI-16
     type: TY-2
-    processes:
+    capability_list:
       - PR-2
       - PR-7
   - id: TL-47
@@ -624,23 +626,26 @@ tools:
     sourceLink: "https://github.com/fritzing/fritzing-app"
     license: LI-7
     type: TY-3
-    processes:
+    capability_list:
       - PR-4
       - PR-8
 
-categories:
+category_list:
   - id: TY-1
     name: Hardware
     description: Physical components, devices or tools
+    order: 1
   - id: TY-2
     name: Software
     description: Code libraries, applications, or frameworks
+    order: 3
   - id: TY-3
     name: Electronics
     parent: TY-1
     description: Hardware which includes electronic components, circuits, or systems
+    order: 2
 
-authors:
+author_list:
   - id: AU-1
     name: Jonathan Oxer
     email: jon@oxer.com.au
@@ -701,7 +706,7 @@ authors:
     name: Lukas K.
     link: https://github.com/carrotIndustries
 
-licenses:
+license_list:
   - id: LI-1
     name: TAPR Open Hardware License (OHL) Version 1.1
     link: http://www.tapr.org/OHL

@@ -30,7 +30,11 @@
             "nullable": true,
             "default": null,
             "$ref": "#/definitions/process/items/properties/id"
-          }
+          },
+          "hidden": {"type": "boolean",
+          "description": "Whether this process should be hidden in most diagrams or views",
+          "default": false
+        }
         },
         "required": [
           "name",
@@ -188,14 +192,14 @@
             "description": "The id of the primary license this tool is released under",
             "$ref": "#/definitions/license/items/properties/id"
           },
-          "authors": {
+          "author_list": {
             "type": "array",
             "items": {
               "type": "string",
               "$ref": "#/definitions/author/items/properties/id"
             }
           },
-          "processes": {
+          "capability_list": {
             "type": "array",
             "items": {
               "type": "string",
@@ -208,29 +212,29 @@
           "name",
           "type",
           "license",
-          "processes"
+          "capability_list"
         ]
       }
   }},
   "type": "object",
   "properties": {
-    "processes": {
+    "capability_list": {
       "$ref": "#/definitions/process"
     },
-    "categories": {
+    "category_list": {
       "$ref": "#/definitions/category"
     },
-    "authors": {
+    "author_list": {
       "$ref": "#/definitions/author"
     },
-    "licenses": {
+    "license_list": {
       "$ref": "#/definitions/license"
     },
-    "tools": {
+    "tool_list": {
       "$ref": "#/definitions/tool"
     }
   },
   "required": [
-    "licenses", "authors", "categories", "processes", "tools"
+    "license_list", "author_list", "category_list", "capability_list", "tool_list"
   ]
 }
