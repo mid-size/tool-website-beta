@@ -389,7 +389,7 @@ tool_list:
       - AU-9
     related_to:
       - TL-3
-  - id: TL-27
+  - id: TL-48
     name: Kitspace
     description: Project sharing site for electronics projects
     link: "https://kitspace.org/"
@@ -708,35 +708,35 @@ author_list:
 
 license_list:
   - id: LI-1
-    name: TAPR Open Hardware License (OHL) Version 1.1
+    name: TAPR OHL v1.1
     link: http://www.tapr.org/OHL
     spdx: TAPR-OHL-1.0
   - id: LI-2
-    name: MIT License
+    name: MIT
     link: https://opensource.org/licenses/MIT
     spdx: MIT
   - id: LI-3
-    name: Apache License 2.0
+    name: Apache 2.0
     link: https://www.apache.org/licenses/LICENSE-2.0
     spdx: Apache-2.0
   - id: LI-4
-    name: GNU General Public License v3.0
+    name: GPL v3 only
     link: https://www.gnu.org/licenses/gpl-3.0.en.html
     spdx: GPL-3.0-only
   - id: LI-5
-    name: GNU Lesser General Public License v3.0 only
+    name: LGPL v3 only
     link: https://www.gnu.org/licenses/lgpl-3.0.en.html
     spdx: LGPL-3.0-only
   - id: LI-6
-    name: GNU Affero General Public License v3.0 only
+    name: AGPL v3 only
     link: https://www.gnu.org/licenses/agpl-3.0.en.html
     spdx: AGPL-3.0-only
   - id: LI-7
-    name: GPLv3 or later
+    name: GPL v3 or later
     link: https://www.gnu.org/licenses/gpl-3.0.en.html
     spdx: GPL-3.0-or-later
   - id: LI-8
-    name: CERN-OHL-W v2
+    name: CERN OHL-W v2
     link: https://ohwr.org/cern_ohl_w_v2.txt
     spdx: CERN-OHL-W-2.0
   - id: LI-9
@@ -744,7 +744,7 @@ license_list:
     link: https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html
     spdx: LGPL-2.1-or-later
   - id: LI-10
-    name: LGPL 3.0 or later
+    name: LGPL 3 or later
     link: https://www.gnu.org/licenses/lgpl-3.0.en.html
     spdx: LGPL-3.0-or-later
   - id: LI-11
@@ -757,11 +757,11 @@ license_list:
     link: https://opensource.org/license/BSD-2-Clause
   - id: LI-13
     spdx: AGPL-3.0-or-later
-    name: GNU Affero General Public License v3.0 or later
+    name: AGPL v3 or later
     link: https://www.gnu.org/licenses/agpl-3.0.html
   - id: LI-14
     spdx: GPL-2.0-only
-    name: GNU General Public License v2.0 only
+    name: GPL v2 only
     link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
   - id: LI-15
     spdx: "LicenseRef-Proprietary"
@@ -769,5 +769,5 @@ license_list:
     link: "https://choosealicense.com/no-permission/"
   - id: LI-16
     spdx: GPL-2.0-or-later
-    name: GNU General Public License v2.0 or later
+    name: GPL v2.0 or later
     link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
