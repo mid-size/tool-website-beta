@@ -42,7 +42,7 @@ capability_list:
     category: TY-2
     parent: PR-3
   - id: PR-12
-    name: Publishing (Open Source) Hardware
+    name: Publishing or selling hardware
     category: TY-3
     parent: PR-5
   - id: PR-13
@@ -432,6 +432,7 @@ tool_list:
     type: TY-3
     capability_list:
       - PR-12
+    is_closed_source: true
 
   - id: TL-30
     name: OpenSCAD
@@ -497,6 +498,7 @@ tool_list:
     capability_list:
       - PR-14
       - PR-11
+    has_enterprise_offering: true
   - id: TL-36
     name: OpenPnP
     description: "pen Source SMT pick and place system that includes ready to run software, and hardware designs that you can build and modify"
@@ -629,6 +631,16 @@ tool_list:
     capability_list:
       - PR-4
       - PR-8
+  - id: TL-49
+    name: Lectronz
+    description: Lectronz.com is a marketplace for electronic enthusiasts and professionals with a focus on the open-hardware and DIY electronics community.
+    link: "https://lectronz.com/sell"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-12
+    is_closed_source: true
+    is_commercial: true
 
 category_list:
   - id: TY-1

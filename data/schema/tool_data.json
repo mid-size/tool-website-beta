@@ -205,6 +205,21 @@
               "type": "string",
               "$ref": "#/definitions/process/items/properties/id"
             }
+          },
+          "is_closed_source": {
+            "type": "boolean",
+            "description": "Whether this tool is closed source or not",
+            "default": false
+          },
+          "is_commercial": {
+            "type": "boolean",
+            "description": "Whether this tool is commercial or not",
+            "default": false
+          },
+          "has_enterprise_offering": {
+            "type": "boolean",
+            "description": "Whether this tool has an enterprise offering (often in form of open core) or not",
+            "default": false
           }
         },
         "required": [
