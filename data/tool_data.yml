@@ -140,7 +140,7 @@ tool_list:
     name: jlcparts
     description: Better parametric search for components available for JLC PCB assembly
     link: https://yaqwsx.github.io/jlcparts/
-    type: TY-2
+    type: TY-3
     license: LI-2
     capability_list:
       - PR-9
@@ -319,7 +319,6 @@ tool_list:
     type: TY-3
     capability_list:
       - PR-9
-      - PR-6
       - PR-10
     author_list:
       - AU-5
@@ -384,7 +383,7 @@ tool_list:
     type: TY-3
     capability_list:
       - PR-9
-      - PR-5
+    #  - PR-5
     author_list:
       - AU-9
     related_to:
@@ -641,6 +640,115 @@ tool_list:
       - PR-12
     is_closed_source: true
     is_commercial: true
+  - id: TL-50
+    name: BeanCounter
+    description: "SMT parts counter that fits in your pocket"
+    link: "https://www.crowdsupply.com/great-big-factory/beancounter"
+    sourceLink: "https://github.com/NPoole/BeanCounter"
+    license: LI-17
+    type: TY-1
+    capability_list:
+      - PR-3
+    author_list:
+      - AU-19
+    oshwa:
+      certified: true
+      id: US002097
+      certification_link: "https://certification.oshwa.org/us002097.html"
+  - id: TL-51
+    name: Crowd Supply
+    description: Corwdfunding platform for hardware designs with link to distribution channels
+    link: "https://www.crowdsupply.com/"
+    sourceLink: "null"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-12
+    is_commercial: true
+    is_closed_source: true
+  - id: TL-52
+    name: tscircuit
+    description: "Create real electronics with Typescript and React "
+    link: "https://tscircuit.com/"
+    sourceLink: "https://github.com/tscircuit/tscircuit"
+    license: LI-2
+    type: TY-3
+    capability_list:
+      - PR-4
+    author_list:
+      - AU-20
+  - id: TL-53
+    name: atopile
+    description: "Design circuit boards with code! Python-like DSL and strong KiCAD integration"
+    link: "https://www.atopile.io/"
+    sourceLink: "https://github.com/atopile/atopile"
+    license: LI-2
+    type: TY-3
+    capability_list:
+      - PR-4
+      - PR-9
+    related_to:
+      - TL-3
+
+  - id: TL-54
+    name: SnapMagic Search
+    description: "EDA independent part search tool "
+    link: "https://www.snapeda.com/"
+    sourceLink: "null"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-9
+      - PR-4
+    is_commercial: true
+    is_closed_source: true
+    related_to:
+      - TL-3
+  - id: TL-54
+    name: PartsBox
+    description: "Control your inventory, ordering and production"
+    link: "https://partsbox.com/"
+    sourceLink: "null"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-10
+      - PR-11
+    is_commercial: true
+    is_closed_source: true
+    related_to:
+      - TL-3
+  - id: TL-55
+    name: Component Search Engine
+    description: Cross-Distributor part search engine
+    link: "https://componentsearchengine.com/"
+    sourceLink: "null"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-9
+    is_commercial: true
+    is_closed_source: true
+  - id: TL-56
+    name: Octopart
+    description: Component search engine bundler with large database
+    link: "https://octopart.com/"
+    sourceLink: "null"
+    license: LI-15
+    type: TY-3
+    capability_list:
+      - PR-9
+    is_commercial: true
+    is_closed_source: true
+  - id: TL-57
+    name: ngspice
+    description: open source spice simulator
+    link: "https://ngspice.sourceforge.io/"
+    sourceLink: "https://sourceforge.net/p/ngspice/ngspice/"
+    license: LI-12
+    type: TY-3
+    capability_list:
+      - PR-17
 
 category_list:
   - id: TY-1
@@ -717,6 +825,13 @@ author_list:
   - id: AU-18
     name: Lukas K.
     link: https://github.com/carrotIndustries
+  - id: AU-19
+    name: Nick Poole
+    link: https://github.com/NPoole
+    email: nick@signalditch.com
+  - id: AU-20
+    name: Severin Ibarluzea
+    link: https://github.com/seveibar
 
 license_list:
   - id: LI-1
@@ -783,3 +898,7 @@ license_list:
     spdx: GPL-2.0-or-later
     name: GPL v2.0 or later
     link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  - id: LI-17
+    spdx: "CC-BY-SA-4.0"
+    name: Creative Commons Attribution-ShareAlike 4.0
+    link: https://creativecommons.org/licenses/by-sa/4.0/
