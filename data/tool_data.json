@@ -1001,6 +1001,61 @@
       "capability_list": [
         "PR-17"
       ]
+    },
+    {
+      "id": "TL-57",
+      "name": "ReflowMaster",
+      "description": "Reflow Master is an open source Toaster Oven reflow controller that includes both hardware and software. ",
+      "link": "https://unexpectedmaker.com/",
+      "sourceLink": "https://github.com/UnexpectedMaker/ReflowMaster",
+      "license": "LI-18",
+      "type": "TY-3",
+      "capability_list": [
+        "PR-3"
+      ],
+      "author_list": [
+        "AU-21"
+      ]
+    },
+    {
+      "id": "TL-58",
+      "name": "KiConnect",
+      "description": "FreeCAD Workbench to integrate KiCAD",
+      "link": "https://codeberg.org/kiconnect/KiConnect",
+      "sourceLink": "https://codeberg.org/kiconnect/KiConnect",
+      "license": "LI-4",
+      "type": "TY-3",
+      "capability_list": [
+        "PR-4",
+        "PR-2"
+      ],
+      "author_list": [
+        "AU-23"
+      ],
+      "related_to": [
+        "TL-3",
+        "TL-12"
+      ]
+    },
+    {
+      "id": "TL-59",
+      "name": "KiCad StepUp",
+      "description": "ECAD to MCAD FreeCAD WorkBench",
+      "link": "https://github.com/easyw/kicadStepUpMod/",
+      "sourceLink": "https://github.com/easyw/kicadStepUpMod/",
+      "license": "LI-13",
+      "type": "TY-3",
+      "capability_list": [
+        "PR-4",
+        "PR-2"
+      ],
+      "author_list": [
+        "AU-22"
+      ],
+      "related_to": [
+        "TL-3",
+        "TL-12"
+      ]
     }
   ],
   "category_list": [
@@ -1130,6 +1185,22 @@
       "id": "AU-20",
       "name": "Severin Ibarluzea",
       "link": "https://github.com/seveibar"
+    },
+    {
+      "id": "AU-21",
+      "name": "Unexpected Maker",
+      "link": "https://github.com/UnexpectedMaker",
+      "email": "seon@unexpectedmaker.com"
+    },
+    {
+      "id": "AU-22",
+      "name": "easyw",
+      "link": "https://github.com/easyw"
+    },
+    {
+      "id": "AU-23",
+      "name": "Morgan Allen",
+      "link": "https://oit.cloud/"
     }
   ],
   "license_list": [
@@ -1234,6 +1305,12 @@
       "spdx": "CC-BY-SA-4.0",
       "name": "Creative Commons Attribution-ShareAlike 4.0",
       "link": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "LI-18",
+      "spdx": "CERN-OHL-1.2",
+      "name": "CERN OHL v1.2",
+      "link": "https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/505f27c2a8a10e528b079be3c9d876c5/cern_ohl_v_1_2.txt"
     }
   ]
 }
