@@ -69,6 +69,10 @@ capability_list:
     name: Generating Manufacturing Information
     category: TY-3
     parent: PR-4
+  - id: PR-19
+    name: Reverse Engineering
+    category: TY-3
+    parent: PR-4
 
 tool_list:
   - id: TL-1
@@ -689,7 +693,6 @@ tool_list:
       - PR-9
     related_to:
       - TL-3
-
   - id: TL-54
     name: SnapMagic Search
     description: "EDA independent part search tool "
@@ -790,6 +793,90 @@ tool_list:
     related_to:
       - TL-3
       - TL-12
+  - id: TL-60
+    name: Dotterboard
+    description: "An SMT part counter for tape and reel components. It counts dots!"
+    link: "https://johnmcnelly.com/dotterboard-a-better-smt-tape-counter/"
+    sourceLink: "https://github.com/CoolNamesAllTaken/dotterboard"
+    license: LI-2
+    type: TY-1
+    capability_list:
+      - PR-3
+    author_list:
+    - AU-24
+  - id: TL-61
+    name: Open Board Viewer
+    description: "View .brd files"
+    link: "https://github.com/OpenBoardView/OpenBoardView"
+    sourceLink: "https://github.com/OpenBoardView/OpenBoardView"
+    license: LI-2
+    type: TY-2
+    capability_list:
+      - PR-13
+    author_list: []
+  - id: TL-62
+    name: kicad-boardview
+    description: "KiCAD to Boardview exporter reads KiCAD PCB layout files and writes ASCII Boardview files"
+    link: "https://github.com/whitequark/kicad-boardview"
+    sourceLink: "https://github.com/whitequark/kicad-boardview"
+    license: LI-19
+    type: TY-3
+    capability_list:
+      - PR-8
+      - PR-18
+    related_to:
+      - TL-3
+      - TL-61
+    author_list:
+    - AU-25
+  - id: TL-64
+    name: KiNote
+    description: "Smart Notes for KiCad PCB Designers"
+    link: "https://github.com/way2pramil/KiNotes"
+    sourceLink: "https://github.com/way2pramil/KiNotes"
+    license: LI-3
+    type: TY-3
+    capability_list:
+      - PR-7
+      - PR-4
+      - PR-14
+    related_to:
+      - TL-3
+    author_list:
+    - AU-26
+  - id: TL-65
+    name: ReelTrack
+    description: Portable and Accurate SMD Electronic Components Counter
+    link: "https://store.rotkee.com/en/reeltrack-portable-and-accurate-smt-electronic-components-counter.html"
+    license: LI-15
+    type: TY-1
+    capability_list:
+      - PR-3
+    is_commercial: true
+    is_closed_source: true
+  - id: TL-66
+    name: Glasgow Interface Explorer
+    description: Open hardware tool for exploring digital interfaces
+    link: "https://glasgow-embedded.org/"
+    sourceLink: "https://github.com/GlasgowEmbedded/glasgow"
+    license: LI-3
+    type: TY-1
+    capability_list:
+      - PR-4
+      - PR-19
+    author_list:
+      - AU-25
+  - id: TL-67
+    name: Spoolman
+    description: Keep track of your inventory of 3D-printer filament spools.
+    link: "https://github.com/Donkie/Spoolman/wiki"
+    sourceLink: "https://github.com/Donkie/Spoolman"
+    license: LI-2
+    type: TY-2
+    capability_list:
+      - PR-11
+    author_list:
+    - AU-27
 
 category_list:
   - id: TY-1
@@ -883,6 +970,21 @@ author_list:
   - id: AU-23
     name: Morgan Allen
     link: https://oit.cloud/
+  - id: AU-24
+    name: John McNelly
+    link: https://johnmcnelly.com/
+    email: john@pantsforbirds.com
+  - id: AU-25
+    name: whitequark
+    link: https://github.com/whitequark
+    email: whitequark@whitequark.org
+  - id: AU-26
+    name: Pramil Wakchaure
+    link: https://github.com/way2pramil
+    email: pramil.wakchaure@gmail.com
+  - id: AU-27
+    name: Donkie
+    link: https://github.com/Donkie
 
 license_list:
   - id: LI-1
@@ -957,3 +1059,7 @@ license_list:
     spdx: "CERN-OHL-1.2"
     name: CERN OHL v1.2
     link: https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/505f27c2a8a10e528b079be3c9d876c5/cern_ohl_v_1_2.txt
+  - id: LI-19
+    spdx: "0BSD"
+    name: BSD Zero Clause License
+    link: https://opensource.org/license/0BSD
